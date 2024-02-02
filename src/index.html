@@ -1,13 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>LinkfreeClone</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>LinkfreeClone</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Página inspirada en LinkTree, creada por diversión. Hecho con Angular.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root></app-root>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const alertaHeader = document.getElementById("headerAlert");
+
+        const htmlMessage = `
+    <div class="alert alert-info" role="alert" id="header">
+    <h4 class="alert-heading">¡Bienvenido a Mi LinkFree!</h4>
+    <p>
+      Esta página fue creada por diversión y es una versión inspirada en
+      LinkTree.
+    </p>
+  </div>
+    `;
+
+        alertaHeader.innerHTML = htmlMessage;
+
+        setTimeout(() => {
+          alertaHeader.classList.add("hidden");
+          // Espera 1 segundo antes de limpiar el contenido
+          setTimeout(() => {
+            alertaHeader.innerHTML = ""; // Limpiar el contenido después de la transición
+          }, 1500);
+        }, 8000);
+      });
+    </script>
+  </body>
 </html>
