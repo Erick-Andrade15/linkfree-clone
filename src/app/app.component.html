@@ -1,16 +1,18 @@
+<!-- Alert Header -->
 <div id="headerAlert" class="container my-3 col-md-6"></div>
+<!-- Button Share LinkFree -->
 <div class="container d-flex col-md-6 justify-content-end">
-  <button
-    title="Compartir LinkFree"
-    class="btn btn-outline-light p-0"
-    
-  >
-  <img src="assets/icon/compartir.svg" alt="app logo" height="45" width="45" />
+  <button title="Compartir LinkFree" class="btn btn-outline-light p-0">
+    <img
+      src="assets/icon/compartir.svg"
+      alt="app logo"
+      height="45"
+      width="45"
+    />
   </button>
 </div>
+<!-- Container -->
 <div class="container my-3 col-md-6" *ngFor="let item of data">
-  <!-- Alert Header -->
-  <div id="headerAlert"></div>
   <!-- Imagen redonda -->
   <img
     [src]="item.profileImage"
@@ -21,12 +23,12 @@
   <!-- Nombre y Descripcion-->
   <h1 class="text-center text-light">{{ item.name }}</h1>
   <p class="text-center text-light">{{ item.description }}</p>
-
   <hr class="text-light" />
-  <!-- Nombre y Descripcion-->
+  <!-- Datos del Json-->
   <div class="text-center mb-3" *ngFor="let item of data[0].links">
-    <!-- Nombre y Descripcion-->
+    <!-- Boton Group-->
     <div class="btn-group w-100">
+      <!-- Boton 1-->
       <a
         class="btn btn-outline-light btn-lg d-flex align-items-center justify-content-between"
         href="{{ item.url }}"
@@ -37,8 +39,8 @@
         </div>
         <span class="mx-auto">{{ item.name }}</span>
       </a>
-      <!-- Nombre y Descripcion-->
       <div class="btn-group">
+        <!-- Boton 2-->
         <button
           type="button"
           title="Más Opciones"
@@ -50,26 +52,17 @@
         </button>
         <ul class="dropdown-menu">
           <li>
-            <button
-              class="dropdown-item"
-              type="button"
-              
-            >
-              Copiar Link
-            </button>
+            <button class="dropdown-item" type="button">Copiar Link</button>
           </li>
           <li>
-            <a
-              class="dropdown-item"
-              href="#"
-              >Compartir</a
-            >
+            <a class="dropdown-item" href="#">Compartir</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
+<!-- Footer-->
 <footer>
   <p class="text-center text-light">
     &copy; 2024 LinkFree | Proyecto por Diversion
