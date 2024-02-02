@@ -9,7 +9,7 @@
   pointer-events: none;
 }
 .dropdown-toggle::after {
-  display: none;
+  display: none !important;
 }
 body {
   background-image: url('assets/img/background.jpg');
