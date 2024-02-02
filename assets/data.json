@@ -1,0 +1,62 @@
+
+[
+    {
+        "name": "Erick Andrade",
+        "description":"Desarrollador de Software",
+        "profileImage": "assets/img/profile.jpg",
+        "links": [
+            {
+                "name": "Instagram",
+                "icon": "assets/icon/instagram.svg",
+                "url": "https://www.instagram.com/erick.andrade15"
+            },
+            {
+                "name": "TikTok",
+                "icon": "assets/icon/tiktok.svg",
+                "url": "https://www.tiktok.com/@erick.andrade15"
+            },
+            {
+                "name": "Facebook",
+                "icon": "assets/icon/facebook.svg",
+                "url": "https://www.facebook.com/erick.andrade.05/"
+            },
+            {
+                "name": "Bereal",
+                "icon": "assets/icon/bereal.svg",
+                "url": "https://bere.al/erick.andrade15"
+            },
+            {
+                "name": "Snapchat",
+                "icon": "assets/icon/snapchat.svg",
+                "url": "https://www.snapchat.com/add/erickb1505"
+            },
+            {
+                "name": "Spotify",
+                "icon": "assets/icon/spotify.svg",
+                "url": "https://open.spotify.com/user/6g774ou483j2jkydqk4o1nj9k"
+            },
+            {
+                "name": "X",
+                "icon": "assets/icon/twitterx.svg",
+                "url": "https://x.com/erick_andrade15"
+            },
+            {
+                "name": "LinkedIn",
+                "icon": "assets/icon/linkedin.svg",
+                "url": "https://www.linkedin.com/in/erick-andrade-desarrollo-de-software/"
+            },
+            {
+                "name": "GitHub",
+                "icon": "assets/icon/github.svg",
+                "url": "https://github.com/Erick-Andrade15"
+            },
+            {
+                "name": "Website",
+                "icon": "assets/icon/website.png",
+                "url": "#"
+            }
+
+           
+        ]
+    }
+]
