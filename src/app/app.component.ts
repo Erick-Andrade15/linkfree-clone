@@ -3,14 +3,14 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 import { ClipboardService } from 'ngx-clipboard';
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'linkfree-clone';
@@ -19,6 +19,7 @@ export class AppComponent {
   constructor(
     private http: HttpClient,
     private clipboardService: ClipboardService,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -31,11 +32,16 @@ export class AppComponent {
   copiarAlPortapapeles(item: any) {
     const enlace = item.url;
     this.clipboardService.copyFromContent(enlace);
+    this.toastr.success('', 'Enlace copiado al portapapeles', {
+      positionClass: 'toast-bottom-center',
+      progressBar: true,
+    });
   }
 
   compartirEnlace(item: any) {
     const enlace = item.url;
-    const texto = "Descubre lo increíble de " + item.name + " siguiéndome ahora! 🌟"
+    const texto =
+      'Descubre lo increíble de ' + item.name + ' siguiéndome ahora! 🌟';
     if (navigator.share) {
       // Si el navegador admite la API de Compartir
       navigator
@@ -51,7 +57,19 @@ export class AppComponent {
       const enlaceCompleto = `${texto}:\n${enlace}`;
       console.log(enlaceCompleto);
       this.clipboardService.copyFromContent(enlaceCompleto);
+      // Mostrar mensaje con toastr
+      this.toastr.success('', 'Enlace copiado al portapapeles', {
+        positionClass: 'toast-bottom-center',
+        progressBar: true,
+      });
+      this.toastr.error(
+        '',
+        '¡El navegador no admite la función de compartir!',
+        {
+          positionClass: 'toast-bottom-center',
+          progressBar: true,
+        }
+      );
     }
   }
-
 }
