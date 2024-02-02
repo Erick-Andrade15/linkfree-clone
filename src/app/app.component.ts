@@ -2,6 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 
+import { ClipboardService } from 'ngx-clipboard';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,6 +18,7 @@ export class AppComponent {
 
   constructor(
     private http: HttpClient,
+    private clipboardService: ClipboardService,
   ) {}
 
   ngOnInit() {
@@ -24,5 +28,8 @@ export class AppComponent {
     });
   }
 
-
+  copiarAlPortapapeles(item: any) {
+    const enlace = item.url;
+    this.clipboardService.copyFromContent(enlace);
+  }
 }
